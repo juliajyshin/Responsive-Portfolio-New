@@ -1,3 +1,5 @@
+@import url("reset.css");
+
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
@@ -8,7 +10,10 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
+
+
 
 /* general */
 
@@ -242,7 +247,7 @@ input[type=submit] {
 /* ____________________MEDIA PART FOR HOMEWORK_____________________ */
 
 /* ============ width at 980px and below ============ */
-@media screen and (max-width: 980px) {
+@media only screen and (max-width: 980px) {
 
   /* general */
   .container {
@@ -273,7 +278,7 @@ input[type=submit] {
 }
 
 /* ============ width at 768px and below ============ */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
 
   .main-section,
@@ -294,6 +299,14 @@ input[type=submit] {
   margin-bottom: 10px;
 }
 
+ .work:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .work:nth-child(odd) {
+    float: right;
+  } 
+
 .auth-image {
   width: 50%;
 }
@@ -304,7 +317,7 @@ input[type=submit] {
 }
 
 /* ============ width at 640px and below ============ */
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
 
 
   #masthead {
@@ -316,10 +329,16 @@ input[type=submit] {
     padding: 0;
   }
 
-  #logo,
-  .work,
   .auth-image {
     width: 100%;
+  }
+ 
+  #logo {
+        width: 100%;
+  }
+
+  .work {
+        width: 100%;
   }
 
   nav {
@@ -333,4 +352,5 @@ input[type=submit] {
     padding-left: 0;
     margin-left: 0;
   }
+
 }
